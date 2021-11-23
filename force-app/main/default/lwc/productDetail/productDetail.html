@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <lightning-card title="Detail about product" icon-name="utility:collection">
+            <template if:true={product}>
+                <div class="slds-m-around_medium">
+                    <lightning-card title={product.Name}>
+                        <p>Price: <lightning-badge label={product.Price__c}></lightning-badge></p>
+                        <p>Color: <lightning-badge label={product.Color__c}></lightning-badge></p>
+                        <p>Dimension: <lightning-badge label={product.Dimension__c}></lightning-badge></p>
+                        <p>Size: <lightning-badge label={product.Size__c}></lightning-badge></p>
+                        <p>Rating: <lightning-badge label={product.Rating__c}></lightning-badge></p>
+                        <p>Image:<img src={product.Image__c} alt="No picture available" style="width: 30; height: 70;" /></p>
+                    </lightning-card>
+                </div> 
+            </template>
+            <template if:false={product}>
+                <div>Select a product from list..</div>
+            </template>
+            <hr>
+            <lightning-button label="Buy" variant="brand" onclick={buySelectedItem}></lightning-button>
+        </lightning-card>
+    </div>
+</template>

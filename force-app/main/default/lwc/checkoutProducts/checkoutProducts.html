@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Checkout" icon-name="utility:shopping_bag">
+        <div class="slds-card__body_inner">
+                <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <template for:each={selected} for:item="s">
+                        <tr key={s.Id} class="slds-hint-parent">
+                            <td>{s.Name}</td>
+                            <td>{s.Price__c}</td>
+                        </tr>
+                    </template>
+                    </tbody>
+                </table>
+                <br/>
+                    <h1 class="slds-text-heading_small">Total price: <lightning-badge label={priceTotal}></lightning-badge> </h1>
+                <hr/>
+                <lightning-button label="Make purchase" variant="brand" onclick={makePurchase}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
