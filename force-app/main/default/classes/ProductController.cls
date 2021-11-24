@@ -5,9 +5,7 @@ global with sharing class ProductController {
     {
         try {
             return [SELECT Id,Name,Description,Image__c,Price__c FROM Product2 WITH SECURITY_ENFORCED];
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        } 
+        } catch (Exception e) { throw new AuraHandledException(e.getMessage()); } 
     }
 
     @AuraEnabled

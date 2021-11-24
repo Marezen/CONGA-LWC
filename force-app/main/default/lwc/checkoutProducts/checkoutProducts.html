@@ -18,9 +18,9 @@
                     </tbody>
                 </table>
                 <br/>
-                    <h1 class="slds-text-heading_small">Total price: <lightning-badge label={priceTotal}></lightning-badge> </h1>
-                <hr/>
-                <lightning-button label="Make purchase" variant="brand" onclick={makePurchase}></lightning-button>
+                    <h1 class="slds-text-heading_medium">Total price: <lightning-badge label={priceTotal} icon-name="utility:moneybag" icon-position="start"></lightning-badge> </h1>
+                <hr class="hrClass"/>
+                <lightning-button label="Make purchase" variant="brand" onclick={makePurchase} class="buttonClass"></lightning-button>
         </div>
     </lightning-card>
 </template>

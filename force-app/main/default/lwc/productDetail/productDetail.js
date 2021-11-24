@@ -20,9 +20,5 @@ export default class ProductDetail extends LightningElement {
             this.product = undefined;
         });
     }
-    //send event to c-checkout-products component and add to table.
-    buySelectedItem()
-    {
-        //
-    }
+    
 }
